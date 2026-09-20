@@ -44,6 +44,7 @@
             box-shadow: 0 2px 8px rgba(0,0,0,0.08);
             position: sticky;
             top: 0;
+            z-index: 100;
         }
 
         nav a {
@@ -51,6 +52,7 @@
             color: #1f2937;
             margin: 0 15px;
             font-weight: bold;
+            cursor: pointer;
         }
 
         nav a:hover {
@@ -112,7 +114,18 @@
             margin-top: 40px;
         }
 
+        /* Hide sections by default */
+        .page-section {
+            display: none;
+        }
+
+        /* Show About Me when website opens */
+        #about {
+            display: block;
+        }
+
         @media (max-width: 600px) {
+
             header h1 {
                 font-size: 28px;
             }
@@ -137,54 +150,267 @@
         <p>Learning • Building • Sharing • Growing</p>
     </header>
 
+
     <!-- Navigation -->
     <nav>
-        <a href="#about">About Me</a>
-        <a href="#learning">Learning</a>
-        <a href="#sih">SIH</a>
-        <a href="#projects">Projects</a>
-    </nav
-        <main>
+        <a href="#about" onclick="showSection('about')">About Me</a>
+        <a href="#sih" onclick="showSection('sih')">SIH</a>
+        <a href="#java" onclick="showSection('java')">Java</a>
+        <a href="#python" onclick="showSection('python')">Python</a>
+        <a href="#projects" onclick="showSection('projects')">Projects</a>
+    </nav>
 
-<section id="about">
-    <h2>About Me</h2>
-    <p>
-        Hi! I'm a B.Tech student passionate about programming,
-        technology, and continuous learning.
-    </p>
-</section>
 
-<section id="learning">
-    <h2>My Learning Journey</h2>
-    <p>
-        I will be sharing what I learn about Java, Python,
-        Data Structures, projects, and my experiences.
-    </p>
+    <main class="container">
 
-    <h3>Day 1 — Starting My Java Journey</h3>
-    <p>
-        Today I started documenting my Java learning journey.
-        This blog will be a record of my progress and experiences.
-    </p>
-</section>
+        <!-- About Me -->
+        <section id="about" class="page-section">
 
-<section id="sih">
-    <h2>Smart India Hackathon</h2>
-    <p>
-        I participated in the Smart India Hackathon and worked
-        with my team on an innovative real-world problem.
-    </p>
-</section>
+            <h2>About Me</h2>
 
-<section id="projects">
-    <h2>Projects</h2>
-    <p>
-        I will be documenting my projects, experiments,
-        and things I build while learning.
-    </p>
-</section>
+            <p>
+                Hello! I'm <strong>Susmitha</strong>, and I am currently
+                pursuing my <strong>B.Tech in Computer Science and Engineering (CSE)</strong>
+                in Andhra Pradesh.
+            </p>
 
-</main>
+            <p>
+                I am passionate about <strong>coding</strong> and learning
+                new technologies. I enjoy exploring new concepts and
+                continuously improving my technical skills.
+            </p>
+
+            <p>
+                Apart from coding, one of my hobbies is
+                <strong>reading books</strong>. I enjoy discovering new ideas
+                and perspectives through reading.
+            </p>
+
+            <div class="highlight">
+
+                <h3>My Smart India Hackathon Experience 🚀</h3>
+
+                <p>
+                    One of my latest experiences has been participating in
+                    the <strong>Smart India Hackathon (SIH)</strong>.
+                </p>
+
+                <p>
+                    As a CSE student, I got the opportunity to explore
+                    the hardware side of a project, which was a completely
+                    new experience for me.
+                </p>
+
+                <p>
+                    I learned a lot throughout this experience and will
+                    be sharing more about my SIH project and journey here.
+                </p>
+
+            </div>
+
+            <h3>Why I Created This Website</h3>
+
+            <p>
+                I created this website to document my learning journey
+                and share the things I learn along the way.
+            </p>
+
+            <p>
+                I will be starting with small topics in
+                <strong>Java and Python</strong>, and gradually adding
+                the projects and experiences I gain throughout my
+                B.Tech journey.
+            </p>
+
+            <p>
+                My goal is to keep learning, building projects,
+                and sharing my journey consistently.
+            </p>
+
+        </section>
+
+
+        <!-- SIH -->
+        <section id="sih" class="page-section">
+
+            <h2>Smart India Hackathon 🚀</h2>
+
+            <p>
+                The Smart India Hackathon has been one of my recent
+                learning experiences.
+            </p>
+
+            <p>
+                I participated in SIH with my team and got the opportunity
+                to work on an innovative real-world problem.
+            </p>
+
+            <h3>My Experience</h3>
+
+            <p>
+                One of the interesting parts of this experience was
+                exploring hardware concepts even though my academic
+                background is Computer Science and Engineering.
+            </p>
+
+            <p>
+                This experience helped me step outside my usual area
+                of study and learn new things while working with my team.
+            </p>
+
+            <div class="highlight">
+
+                <h3>Project Details</h3>
+
+                <p>
+                    I will be adding the detailed information about
+                    our SIH problem statement, idea, prototype,
+                    technologies, and my contribution here soon.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- Java -->
+        <section id="java" class="page-section">
+
+            <h2>Java ☕</h2>
+
+            <p>
+                This section will contain my Java learning journey.
+            </p>
+
+            <p>
+                I will be sharing the concepts I learn, starting from
+                the basics and gradually moving towards Object-Oriented
+                Programming and other advanced concepts.
+            </p>
+
+            <h3>What I Will Share</h3>
+
+            <ul>
+                <li>Java basics</li>
+                <li>Variables and data types</li>
+                <li>Operators</li>
+                <li>Conditional statements</li>
+                <li>Loops</li>
+                <li>Methods</li>
+                <li>Object-Oriented Programming</li>
+                <li>Programs and examples</li>
+            </ul>
+
+            <div class="highlight">
+
+                <p>
+                    My Java posts will be added here as I learn
+                    and practice new concepts.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- Python -->
+        <section id="python" class="page-section">
+
+            <h2>Python 🐍</h2>
+
+            <p>
+                This section will contain my Python learning journey.
+            </p>
+
+            <p>
+                I will be starting with the fundamentals and gradually
+                adding the concepts, programs, and projects that I learn.
+            </p>
+
+            <h3>What I Will Share</h3>
+
+            <ul>
+                <li>Python basics</li>
+                <li>Variables and data types</li>
+                <li>Operators</li>
+                <li>Conditional statements</li>
+                <li>Loops</li>
+                <li>Functions</li>
+                <li>Object-Oriented Programming</li>
+                <li>Programs and projects</li>
+            </ul>
+
+            <div class="highlight">
+
+                <p>
+                    New Python topics will be added here as
+                    I continue learning.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- Projects -->
+        <section id="projects" class="page-section">
+
+            <h2>Projects 💻</h2>
+
+            <p>
+                This section will contain the projects and experiments
+                that I build while learning.
+            </p>
+
+            <h3>My Projects</h3>
+
+            <p>
+                Projects will be added here as I build and complete them.
+            </p>
+
+            <div class="highlight">
+
+                <p>
+                    More projects and details will be added soon.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 Susmitha • My Learning Journey</p>
+    </footer>
+
+
+    <!-- JavaScript for Navigation -->
+    <script>
+
+        function showSection(sectionId) {
+
+            // Hide all sections
+            const sections = document.querySelectorAll('.page-section');
+
+            sections.forEach(function(section) {
+                section.style.display = 'none';
+            });
+
+            // Show selected section
+            document.getElementById(sectionId).style.display = 'block';
+
+            // Move to the section
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+
+    </script>
 
 </body>
+
 </html>
