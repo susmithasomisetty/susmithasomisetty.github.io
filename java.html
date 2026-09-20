@@ -1,112 +1,356 @@
-<section>
-    <h2>Day 1 — Introduction to Java ☕</h2>
+<!DOCTYPE html>
+<html lang="en">
 
-    <p>
-        Hello everyone! Welcome to my Java learning journey.
-        I will try to make Java easy to learn in a simple and
-        interesting way so that everyone can understand it.
-        So, let's begin with the introduction!
-    </p>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <h3>What is Java?</h3>
+    <title>Java | Susmitha's Learning Journey</title>
 
-    <p>
-        Java is a programming language, just like C and Python.
-        You may be wondering — where is Java actually useful?
-    </p>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <p>
-        Java is widely used to develop software applications.
-        Coding is an important part of many fields because it
-        helps us create and use different applications and
-        online services.
-    </p>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
 
-    <p>
-        For example, when we use an application like Meesho,
-        we interact with different features, forms, questions,
-        buttons, and other functionalities. All of these are
-        made possible through programming.
-    </p>
+    <style>
 
-    <p>
-        Java can be used in developing different parts of
-        applications, including backend systems and many other
-        software applications. I will explain what frontend
-        and backend mean in the upcoming topics.
-    </p>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    <p>
-        But before going into all of that, let's start with
-        the basics of Java.
-    </p>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #f8fafc;
+            color: #1e293b;
+            line-height: 1.7;
+        }
 
-    <h3>Java and C</h3>
+        header {
+            background: linear-gradient(135deg, #eef2ff, #f8fafc, #e0f2fe);
+            text-align: center;
+            padding: 75px 20px;
+        }
 
-    <p>
-        Many of us may learn C before Java, just like we do
-        in college. Since I have also started with C, I will
-        sometimes compare Java with C to make certain concepts
-        easier to understand.
-    </p>
+        header .icon {
+            font-size: 55px;
+            margin-bottom: 15px;
+        }
 
-    <p>
-        For example, in C, we use <strong>printf()</strong>
-        to print something on the screen, whereas in Java,
-        we commonly use <strong>System.out.println()</strong>.
-    </p>
+        header h1 {
+            font-size: clamp(38px, 6vw, 58px);
+            color: #0f172a;
+            margin-bottom: 12px;
+        }
 
-    <p>
-        I will explain these differences and the reasons behind
-        them in detail when we reach those concepts.
-    </p>
+        header h1 span {
+            color: #4f46e5;
+        }
 
-    <h3>How did Java get its name?</h3>
+        header p {
+            color: #64748b;
+            font-size: 17px;
+        }
 
-    <p>
-        Java was developed at <strong>Sun Microsystems</strong>,
-        with <strong>James Gosling</strong> being one of the
-        key people behind its development.
-    </p>
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
 
-    <p>
-        Java was originally called <strong>Oak</strong>.
-        The name was later changed to Java.
-    </p>
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
 
-    <p>
-        You may now be wondering — why was the name Oak changed
-        to Java?
-    </p>
+            padding: 15px;
 
-    <p>
-        One commonly shared story is that there was an oak tree
-        near James Gosling's office, which inspired the original
-        name. Later, because the name Oak was already associated
-        with another trademark, the name was changed.
-    </p>
+            background: rgba(255,255,255,0.92);
+            backdrop-filter: blur(12px);
 
-    <p>
-        The new name, <strong>Java</strong>, was associated with
-        coffee, which is why you may often see the coffee theme
-        connected with Java. ☕
-        
-    </p>
+            border-bottom: 1px solid #e2e8f0;
+        }
 
-    <div class="highlight">
+        nav a {
+            text-decoration: none;
+            color: #475569;
+            font-weight: 600;
 
-        <h3>That's it for today! 😊</h3>
+            padding: 8px 14px;
+            margin: 4px;
+
+            border-radius: 20px;
+
+            transition: 0.25s;
+        }
+
+        nav a:hover {
+            background: #eef2ff;
+            color: #4f46e5;
+            transform: translateY(-2px);
+        }
+
+        main {
+            max-width: 950px;
+            margin: auto;
+            padding: 60px 20px;
+        }
+
+        .intro-card {
+            background: white;
+            padding: 35px;
+
+            border-radius: 18px;
+            border: 1px solid #e2e8f0;
+
+            box-shadow: 0 8px 25px rgba(15,23,42,0.06);
+
+            margin-bottom: 30px;
+        }
+
+        .intro-card h2 {
+            color: #0f172a;
+            margin-bottom: 18px;
+        }
+
+        .intro-card p {
+            color: #475569;
+            margin-bottom: 14px;
+        }
+
+        .topic {
+            background: white;
+            padding: 30px;
+
+            border-radius: 18px;
+            border: 1px solid #e2e8f0;
+
+            box-shadow: 0 8px 25px rgba(15,23,42,0.06);
+
+            margin-bottom: 30px;
+
+            transition: 0.3s;
+        }
+
+        .topic:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 15px 30px rgba(15,23,42,0.09);
+        }
+
+        .topic h2 {
+            color: #4f46e5;
+            margin-bottom: 18px;
+        }
+
+        .highlight {
+            background: #eef2ff;
+            border-left: 5px solid #4f46e5;
+
+            padding: 20px;
+            border-radius: 8px;
+
+            margin-top: 20px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+
+            background: #0f172a;
+            color: #cbd5e1;
+        }
+
+        @media (max-width: 600px) {
+
+            header {
+                padding: 55px 20px;
+            }
+
+            main {
+                padding: 40px 18px;
+            }
+
+            .intro-card,
+            .topic {
+                padding: 25px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+
+        <div class="icon">☕</div>
+
+        <h1>My <span>Java</span> Journey</h1>
 
         <p>
-            I don't want to make our first lesson too long.
-            This was just a basic introduction to Java.
+            Learning Java step by step • Understanding • Practicing • Growing
         </p>
+
+    </header>
+
+
+    <nav>
+
+        <a href="index.html">Home</a>
+        <a href="index.html#about">About Me</a>
+        <a href="sih.html">SIH</a>
+        <a href="java.html">Java</a>
+        <a href="python.html">Python</a>
+        <a href="projects.html">Projects</a>
+
+    </nav>
+
+
+    <main>
+
+        <div class="intro-card">
+
+            <h2>Welcome to My Java Journey ☕</h2>
+
+            <p>
+                I am starting my journey with Java and I want to
+                understand it step by step rather than simply memorizing
+                the concepts.
+            </p>
+
+            <p>
+                In this page, I will share what I learn, the questions
+                that come to my mind, the answers I find, and the
+                programs I practice.
+            </p>
+
+        </div>
+
+
+        <!-- DAY 1 -->
+
+        <div class="topic">
+
+            <h2>Day 1 — Introduction to Java</h2>
+
+            <p>
+                Hello everyone! Welcome to my Java learning journey.
+                I will try to make Java easy to learn in a simple and
+                interesting way so that everyone can understand it.
+                So, let's begin with the introduction!
+            </p>
+
+            <h3>What is Java?</h3>
+
+            <p>
+                Java is a programming language, just like C and Python.
+                You may be wondering — where is Java actually useful?
+            </p>
+
+            <p>
+                Java is widely used to develop software applications.
+                Coding is an important part of many fields because it
+                helps us create and use different applications and
+                online services.
+            </p>
+
+            <p>
+                For example, when we use an application like Meesho,
+                we interact with different features, forms, questions,
+                buttons, and other functionalities. All of these are
+                made possible through programming.
+            </p>
+
+            <p>
+                Java can be used in developing different parts of
+                applications, including backend systems and many other
+                software applications. I will explain what frontend
+                and backend mean in the upcoming topics.
+            </p>
+
+            <p>
+                But before going into all of that, let's start with
+                the basics of Java.
+            </p>
+
+            <h3>Java and C</h3>
+
+            <p>
+                Many of us may learn C before Java, just like we do
+                in college. Since I have also started with C, I will
+                sometimes compare Java with C to make certain concepts
+                easier to understand.
+            </p>
+
+            <p>
+                For example, in C, we use <strong>printf()</strong>
+                to print something on the screen, whereas in Java,
+                we commonly use <strong>System.out.println()</strong>.
+            </p>
+
+            <p>
+                I will explain these differences and the reasons behind
+                them in detail when we reach those concepts.
+            </p>
+
+            <h3>How did Java get its name?</h3>
+
+            <p>
+                Java was developed at <strong>Sun Microsystems</strong>,
+                with <strong>James Gosling</strong> being one of the
+                key people behind its development.
+            </p>
+
+            <p>
+                Java was originally called <strong>Oak</strong>.
+                The name was later changed to Java.
+            </p>
+
+            <p>
+                One commonly shared story is that there was an oak tree
+                near James Gosling's office, which inspired the original
+                name. Later, because the name Oak was already associated
+                with another trademark, the name was changed.
+            </p>
+
+            <p>
+                The new name, <strong>Java</strong>, was associated with
+                coffee, which is why you may often see the coffee theme
+                connected with Java. ☕
+            </p>
+
+            <div class="highlight">
+
+                <h3>That's it for today! 😊</h3>
+
+                <p>
+                    I don't want to make our first lesson too long.
+                    This was just a basic introduction to Java.
+                </p>
+
+                <p>
+                    In the upcoming posts, we'll start exploring the
+                    basics of Java step by step. See you soon! 🚀
+                </p>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <footer>
 
         <p>
-            In the upcoming posts, we'll start exploring the
-            basics of Java step by step. See you soon! 🚀
+            © 2026 Susmitha Somisetty • My Java Journey
         </p>
 
-    </div>
+    </footer>
 
-</section>
+</body>
+
+</html>
