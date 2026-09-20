@@ -5,410 +5,545 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>My Learning Journey</title>
+    <title>Susmitha | My Learning Journey</title>
+
+    <!-- Modern Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
 
     <style>
+
         * {
-            box-sizing: border-box;
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
         }
 
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Inter', sans-serif;
+            background: #f8fafc;
+            color: #1e293b;
             line-height: 1.7;
-            background-color: #f5f7fa;
-            color: #222;
         }
+
+        /* ================= HEADER ================= */
 
         header {
-            background: #1f2937;
-            color: white;
-            padding: 25px 10%;
+            min-height: 75vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             text-align: center;
+            padding: 60px 20px;
+
+            background:
+                linear-gradient(135deg, #eef2ff, #f8fafc 50%, #e0f2fe);
         }
 
-        header h1 {
-            font-size: 36px;
-            margin-bottom: 8px;
+        .hero {
+            max-width: 850px;
+            animation: fadeUp 1s ease;
         }
 
-        header p {
-            font-size: 17px;
+        .hero .hello {
+            font-size: 18px;
+            font-weight: 600;
+            color: #4f46e5;
+            margin-bottom: 12px;
         }
+
+        .hero h1 {
+            font-size: clamp(42px, 7vw, 72px);
+            font-weight: 800;
+            letter-spacing: -2px;
+            color: #0f172a;
+            margin-bottom: 15px;
+        }
+
+        .hero h1 span {
+            color: #4f46e5;
+        }
+
+        .hero p {
+            max-width: 650px;
+            margin: 0 auto 25px;
+            font-size: 18px;
+            color: #475569;
+        }
+
+        .tagline {
+            font-size: 16px !important;
+            font-weight: 600;
+            color: #334155 !important;
+        }
+
+        /* ================= NAVIGATION ================= */
 
         nav {
-            background: white;
-            padding: 15px;
-            text-align: center;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
             position: sticky;
             top: 0;
-            z-index: 100;
+            z-index: 1000;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+
+            padding: 16px 20px;
+
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(12px);
+
+            border-bottom: 1px solid #e2e8f0;
         }
 
         nav a {
             text-decoration: none;
-            color: #1f2937;
-            margin: 0 15px;
-            font-weight: bold;
-            cursor: pointer;
+            color: #475569;
+
+            font-size: 14px;
+            font-weight: 600;
+
+            margin: 5px 8px;
+            padding: 9px 15px;
+
+            border-radius: 20px;
+
+            transition: all 0.25s ease;
         }
 
         nav a:hover {
-            color: #2563eb;
+            color: #4f46e5;
+            background: #eef2ff;
+            transform: translateY(-2px);
         }
 
-        .container {
-            max-width: 1000px;
-            margin: 40px auto;
-            padding: 0 20px;
+        /* ================= MAIN ================= */
+
+        main {
+            max-width: 1100px;
+            margin: auto;
+            padding: 70px 20px;
         }
 
-        section {
+        .intro {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .intro h2 {
+            font-size: 32px;
+            color: #0f172a;
+            margin-bottom: 10px;
+        }
+
+        .intro p {
+            color: #64748b;
+        }
+
+        /* ================= CARDS ================= */
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+
+        .card {
+            position: relative;
+
+            text-decoration: none;
+            color: inherit;
+
             background: white;
-            padding: 30px;
-            margin-bottom: 30px;
-            border-radius: 12px;
-            box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+            padding: 32px;
+
+            border: 1px solid #e2e8f0;
+            border-radius: 18px;
+
+            box-shadow: 0 8px 25px rgba(15, 23, 42, 0.06);
+
+            transition:
+                transform 0.3s ease,
+                box-shadow 0.3s ease,
+                border-color 0.3s ease;
+
+            overflow: hidden;
         }
 
-        h2 {
-            color: #1f2937;
+        .card::before {
+            content: "";
+
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            height: 4px;
+
+            background: #4f46e5;
+
+            transform: scaleX(0);
+            transform-origin: left;
+
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 18px 35px rgba(15, 23, 42, 0.10);
+            border-color: #c7d2fe;
+        }
+
+        .card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .icon {
+            font-size: 35px;
             margin-bottom: 15px;
-            font-size: 27px;
         }
 
-        h3 {
-            margin-top: 20px;
+        .card h3 {
+            font-size: 22px;
+            color: #0f172a;
             margin-bottom: 8px;
-            color: #2563eb;
         }
 
-        p {
-            margin-bottom: 12px;
-            font-size: 16px;
+        .card p {
+            color: #64748b;
+            font-size: 15px;
         }
 
-        ul {
-            margin-left: 25px;
+        .arrow {
+            display: inline-block;
+            margin-top: 18px;
+
+            color: #4f46e5;
+            font-weight: 700;
+
+            transition: transform 0.25s ease;
         }
 
-        li {
-            margin: 8px 0;
+        .card:hover .arrow {
+            transform: translateX(6px);
         }
 
-        .highlight {
-            background: #eef4ff;
-            padding: 20px;
-            border-left: 5px solid #2563eb;
-            margin-top: 20px;
-            border-radius: 6px;
+        /* Make Projects card wider */
+
+        .card-projects {
+            grid-column: span 2;
         }
+
+        /* ================= FOOTER ================= */
 
         footer {
-            background: #1f2937;
-            color: white;
             text-align: center;
-            padding: 25px;
-            margin-top: 40px;
+            padding: 30px 20px;
+
+            background: #0f172a;
+            color: #cbd5e1;
         }
 
-        /* Hide sections by default */
-        .page-section {
-            display: none;
+        footer p {
+            font-size: 14px;
         }
 
-        /* Show About Me when website opens */
-        #about {
-            display: block;
-        }
+        /* ================= ANIMATION ================= */
 
-        @media (max-width: 600px) {
+        @keyframes fadeUp {
 
-            header h1 {
-                font-size: 28px;
+            from {
+                opacity: 0;
+                transform: translateY(25px);
             }
 
-            nav a {
-                display: inline-block;
-                margin: 5px 8px;
+            to {
+                opacity: 1;
+                transform: translateY(0);
             }
 
-            section {
-                padding: 22px;
-            }
         }
+
+        /* ================= MOBILE ================= */
+
+        @media (max-width: 700px) {
+
+            header {
+                min-height: 65vh;
+            }
+
+            .hero h1 {
+                letter-spacing: -1px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            .card-projects {
+                grid-column: span 1;
+            }
+
+            main {
+                padding: 50px 18px;
+            }
+
+        }
+
     </style>
+
 </head>
+
 
 <body>
 
-    <!-- Header -->
+    <!-- ================= HERO ================= -->
+
     <header>
-        <h1>My Learning Journey</h1>
-        <p>Learning • Building • Sharing • Growing</p>
+
+        <div class="hero">
+
+            <div class="hello">
+                Hello, I'm 👋
+            </div>
+
+            <h1>
+                Susmitha <span>Somisetty</span>
+            </h1>
+
+            <p>
+                A Computer Science student passionate about coding,
+                learning new technologies, building projects,
+                and sharing my journey.
+            </p>
+
+            <p class="tagline">
+                Learning • Building • Sharing • Growing 🚀
+            </p>
+
+        </div>
+
     </header>
 
 
-    <!-- Navigation -->
+    <!-- ================= NAVIGATION ================= -->
+
     <nav>
-        <a href="java.html">Java</a>
-        <a href="python.html">Python</a>
+
+        <a href="index.html">Home</a>
+
+        <a href="index.html#about">About Me</a>
+
         <a href="sih.html">SIH</a>
+
+        <a href="java.html">Java</a>
+
+        <a href="python.html">Python</a>
+
         <a href="projects.html">Projects</a>
+
     </nav>
 
 
-    <main class="container">
+    <!-- ================= MAIN CONTENT ================= -->
 
-        <!-- About Me -->
-        <section id="about" class="page-section">
+    <main>
 
-            <h2>About Me</h2>
+        <div class="intro">
+
+            <h2>Explore My Journey</h2>
 
             <p>
-                Hello! I'm <strong>Susmitha</strong>, and I am currently
-                pursuing my <strong>B.Tech in Computer Science and Engineering (CSE)</strong>
+                A small space where I document what I learn,
+                what I build, and the experiences I gain.
+            </p>
+
+        </div>
+
+
+        <div class="cards">
+
+
+            <!-- ABOUT ME -->
+
+            <a href="#about" class="card">
+
+                <div class="icon">
+                    👩‍💻
+                </div>
+
+                <h3>About Me</h3>
+
+                <p>
+                    Get to know me, my interests, my passion for
+                    coding, and what inspired me to create this website.
+                </p>
+
+                <span class="arrow">
+                    Explore →
+                </span>
+
+            </a>
+
+
+            <!-- SIH -->
+
+            <a href="sih.html" class="card">
+
+                <div class="icon">
+                    🚀
+                </div>
+
+                <h3>Smart India Hackathon</h3>
+
+                <p>
+                    Explore my SIH experience, the challenges I faced,
+                    what I learned, and the project I worked on.
+                </p>
+
+                <span class="arrow">
+                    Explore →
+                </span>
+
+            </a>
+
+
+            <!-- JAVA -->
+
+            <a href="java.html" class="card">
+
+                <div class="icon">
+                    ☕
+                </div>
+
+                <h3>Java</h3>
+
+                <p>
+                    Follow my Java learning journey, from basic concepts
+                    to programming, questions, and practical learning.
+                </p>
+
+                <span class="arrow">
+                    Explore →
+                </span>
+
+            </a>
+
+
+            <!-- PYTHON -->
+
+            <a href="python.html" class="card">
+
+                <div class="icon">
+                    🐍
+                </div>
+
+                <h3>Python</h3>
+
+                <p>
+                    Discover the Python concepts, programs,
+                    and ideas I learn along the way.
+                </p>
+
+                <span class="arrow">
+                    Explore →
+                </span>
+
+            </a>
+
+
+            <!-- PROJECTS -->
+
+            <a href="projects.html" class="card card-projects">
+
+                <div class="icon">
+                    💻
+                </div>
+
+                <h3>Projects</h3>
+
+                <p>
+                    A collection of projects I build while learning
+                    and experimenting with different technologies.
+                </p>
+
+                <span class="arrow">
+                    Explore →
+                </span>
+
+            </a>
+
+
+        </div>
+
+
+        <!-- ================= ABOUT ME ================= -->
+
+        <section id="about"
+            style="
+                background:white;
+                margin-top:70px;
+                padding:40px;
+                border-radius:18px;
+                border:1px solid #e2e8f0;
+                box-shadow:0 8px 25px rgba(15,23,42,0.06);
+            ">
+
+            <h2 style="margin-bottom:15px;">
+                About Me 👋
+            </h2>
+
+            <p>
+                Hello! I'm Susmitha, currently pursuing my
+                B.Tech in Computer Science and Engineering
                 in Andhra Pradesh.
             </p>
 
             <p>
-                I am passionate about <strong>coding</strong> and learning
-                new technologies. I enjoy exploring new concepts and
-                continuously improving my technical skills.
+                I am passionate about coding and learning new
+                technologies. Apart from coding, I enjoy reading books.
             </p>
 
             <p>
-                Apart from coding, one of my hobbies is
-                <strong>reading books</strong>. I enjoy discovering new ideas
-                and perspectives through reading.
-            </p>
-
-            <div class="highlight">
-
-                <h3>My Smart India Hackathon Experience 🚀</h3>
-
-                <p>
-                    One of my latest experiences has been participating in
-                    the <strong>Smart India Hackathon (SIH)</strong>.
-                </p>
-
-                <p>
-                    As a CSE student, I got the opportunity to explore
-                    the hardware side of a project, which was a completely
-                    new experience for me.
-                </p>
-
-                <p>
-                    I learned a lot throughout this experience and will
-                    be sharing more about my SIH project and journey here.
-                </p>
-
-            </div>
-
-            <h3>Why I Created This Website</h3>
-
-            <p>
-                I created this website to document my learning journey
-                and share the things I learn along the way.
+                One of my recent experiences was participating in
+                the Smart India Hackathon, where I got the opportunity
+                to explore hardware concepts even as a CSE student.
             </p>
 
             <p>
-                I will be starting with small topics in
-                <strong>Java and Python</strong>, and gradually adding
-                the projects and experiences I gain throughout my
-                B.Tech journey.
+                This website is where I will share my learning journey,
+                including Java, Python, projects, and the experiences
+                I gain along the way.
             </p>
-
-            <p>
-                My goal is to keep learning, building projects,
-                and sharing my journey consistently.
-            </p>
-
-        </section>
-
-
-        <!-- SIH -->
-        <section id="sih" class="page-section">
-
-            <h2>Smart India Hackathon 🚀</h2>
-
-            <p>
-                The Smart India Hackathon has been one of my recent
-                learning experiences.
-            </p>
-
-            <p>
-                I participated in SIH with my team and got the opportunity
-                to work on an innovative real-world problem.
-            </p>
-
-            <h3>My Experience</h3>
-
-            <p>
-                One of the interesting parts of this experience was
-                exploring hardware concepts even though my academic
-                background is Computer Science and Engineering.
-            </p>
-
-            <p>
-                This experience helped me step outside my usual area
-                of study and learn new things while working with my team.
-            </p>
-
-            <div class="highlight">
-
-                <h3>Project Details</h3>
-
-                <p>
-                    I will be adding the detailed information about
-                    our SIH problem statement, idea, prototype,
-                    technologies, and my contribution here soon.
-                </p>
-
-            </div>
-
-        </section>
-
-
-        <!-- Java -->
-        <section id="java" class="page-section">
-
-            <h2>Java ☕</h2>
-
-            <p>
-                This section will contain my Java learning journey.
-            </p>
-
-            <p>
-                I will be sharing the concepts I learn, starting from
-                the basics and gradually moving towards Object-Oriented
-                Programming and other advanced concepts.
-            </p>
-
-            <h3>What I Will Share</h3>
-
-            <ul>
-                <li>Java basics</li>
-                <li>Variables and data types</li>
-                <li>Operators</li>
-                <li>Conditional statements</li>
-                <li>Loops</li>
-                <li>Methods</li>
-                <li>Object-Oriented Programming</li>
-                <li>Programs and examples</li>
-            </ul>
-
-            <div class="highlight">
-
-                <p>
-                    My Java posts will be added here as I learn
-                    and practice new concepts.
-                </p>
-
-            </div>
-
-        </section>
-
-
-        <!-- Python -->
-        <section id="python" class="page-section">
-
-            <h2>Python 🐍</h2>
-
-            <p>
-                This section will contain my Python learning journey.
-            </p>
-
-            <p>
-                I will be starting with the fundamentals and gradually
-                adding the concepts, programs, and projects that I learn.
-            </p>
-
-            <h3>What I Will Share</h3>
-
-            <ul>
-                <li>Python basics</li>
-                <li>Variables and data types</li>
-                <li>Operators</li>
-                <li>Conditional statements</li>
-                <li>Loops</li>
-                <li>Functions</li>
-                <li>Object-Oriented Programming</li>
-                <li>Programs and projects</li>
-            </ul>
-
-            <div class="highlight">
-
-                <p>
-                    New Python topics will be added here as
-                    I continue learning.
-                </p>
-
-            </div>
-
-        </section>
-
-
-        <!-- Projects -->
-        <section id="projects" class="page-section">
-
-            <h2>Projects 💻</h2>
-
-            <p>
-                This section will contain the projects and experiments
-                that I build while learning.
-            </p>
-
-            <h3>My Projects</h3>
-
-            <p>
-                Projects will be added here as I build and complete them.
-            </p>
-
-            <div class="highlight">
-
-                <p>
-                    More projects and details will be added soon.
-                </p>
-
-            </div>
 
         </section>
 
     </main>
 
 
-    <!-- Footer -->
+    <!-- ================= FOOTER ================= -->
+
     <footer>
-        <p>© 2026 Susmitha • My Learning Journey</p>
+
+        <p>
+            © 2026 Susmitha Somisetty • My Learning Journey
+        </p>
+
     </footer>
 
-
-    <!-- JavaScript for Navigation -->
-    <script>
-
-        function showSection(sectionId) {
-
-            // Hide all sections
-            const sections = document.querySelectorAll('.page-section');
-
-            sections.forEach(function(section) {
-                section.style.display = 'none';
-            });
-
-            // Show selected section
-            document.getElementById(sectionId).style.display = 'block';
-
-            // Move to the section
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        }
-
-    </script>
 
 </body>
 
