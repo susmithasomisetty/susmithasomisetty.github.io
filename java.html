@@ -15,6 +15,20 @@
         rel="stylesheet">
 
     <style>
+    
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        ...
+    }
+
+    header {
+        ...
+    }
 
         * {
             margin: 0;
@@ -177,6 +191,77 @@
             }
 
         }
+        .java-section {
+    padding: 50px 20px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.java-section h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.section-intro {
+    text-align: center;
+    font-size: 17px;
+    margin-bottom: 35px;
+}
+
+.features-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+}
+
+.feature-card {
+    padding: 25px;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.feature-card h3 {
+    margin-bottom: 12px;
+    font-size: 21px;
+}
+
+.feature-card p {
+    line-height: 1.7;
+    font-size: 15px;
+}
+
+.highlight {
+    font-weight: bold;
+    font-style: italic;
+    margin-top: 15px;
+}
+
+.flow {
+    margin-top: 18px;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: bold;
+    text-align: center;
+    overflow-x: auto;
+}
+
+@media (max-width: 700px) {
+    .features-container {
+        grid-template-columns: 1fr;
+    }
+
+    .java-section h2 {
+        font-size: 27px;
+    }
+}
 
     </style>
 
@@ -340,8 +425,145 @@
 
         </div>
 
-    </main>
+    
+    <section class="java-section">
+    <h2>☕ Features of Java</h2>
 
+    <p class="section-intro">
+        Java has several features that make it a popular and widely used
+        programming language.
+    </p>
+
+    <div class="features-container">
+
+        <!-- 1 -->
+        <div class="feature-card">
+            <h3>1. Compiled and Interpreted</h3>
+            <p>
+                Java uses both compilation and interpretation. The Java source
+                code (.java) is first compiled by the Java compiler into
+                bytecode (.class). The JVM then executes this bytecode.
+                Modern JVMs also use JIT (Just-In-Time) compilation to convert
+                frequently executed bytecode into native machine code for
+                better performance.
+            </p>
+
+            <div class="flow">
+                Java Source Code → Compiler → Bytecode → JVM → Machine Code
+            </div>
+        </div>
+
+        <!-- 2 -->
+        <div class="feature-card">
+            <h3>2. Platform Independent</h3>
+            <p>
+                Java is platform independent because Java programs are
+                compiled into bytecode, which can run on different operating
+                systems as long as a suitable JVM is available.
+            </p>
+
+            <p class="highlight">
+                “Write Once, Run Anywhere.”
+            </p>
+        </div>
+
+        <!-- 3 -->
+        <div class="feature-card">
+            <h3>3. Object-Oriented</h3>
+            <p>
+                Java follows the Object-Oriented Programming (OOP) approach.
+                Programs can be organized using classes and objects.
+                Objects contain data and methods that operate on that data.
+            </p>
+        </div>
+
+        <!-- 4 -->
+        <div class="feature-card">
+            <h3>4. Robust</h3>
+            <p>
+                Java is considered robust because it provides features such
+                as exception handling and garbage collection, which help make
+                programs more reliable and manage memory effectively.
+            </p>
+        </div>
+
+        <!-- 5 -->
+        <div class="feature-card">
+            <h3>5. Secure</h3>
+            <p>
+                Java provides several security mechanisms such as bytecode
+                verification, access controls, and class-loading security
+                mechanisms to help run programs safely.
+            </p>
+        </div>
+
+        <!-- 6 -->
+        <div class="feature-card">
+            <h3>6. Dynamic</h3>
+            <p>
+                Java can load classes and resources during runtime, making it
+                a dynamic programming language.
+            </p>
+        </div>
+
+        <!-- 7 -->
+        <div class="feature-card">
+            <h3>7. Distributed</h3>
+            <p>
+                Java supports the development of distributed applications
+                that communicate across different systems and networks.
+            </p>
+        </div>
+
+        <!-- 8 -->
+        <div class="feature-card">
+            <h3>8. Simple and Familiar</h3>
+            <p>
+                Java has a simple and familiar syntax, with similarities to
+                languages such as C and C++, making it easier to learn.
+            </p>
+        </div>
+
+        <!-- 9 -->
+        <div class="feature-card">
+            <h3>9. Portable</h3>
+            <p>
+                Java programs can be moved between different platforms
+                without requiring major changes.
+            </p>
+        </div>
+
+        <!-- 10 -->
+        <div class="feature-card">
+            <h3>10. High Performance</h3>
+            <p>
+                Java provides good performance through bytecode execution
+                and JIT (Just-In-Time) compilation.
+            </p>
+        </div>
+
+        <!-- 11 -->
+        <div class="feature-card">
+            <h3>11. Multithreaded</h3>
+            <p>
+                Java supports multithreading, allowing a program to perform
+                multiple tasks concurrently.
+            </p>
+        </div>
+
+        <!-- 12 -->
+        <div class="feature-card">
+            <h3>12. Architecture Neutral</h3>
+            <p>
+                Java bytecode is not tied to a specific processor architecture,
+                allowing Java programs to run on different systems through
+                their JVM implementations.
+            </p>
+        </div>
+
+    </div>
+</section>
+</main>
 
     <footer>
 
