@@ -314,9 +314,6 @@
 
         </div>
 
-
-        <!-- DAY 1 -->
-
         <div class="topic">
 
             <h2>Day 1 — Introduction to Java</h2>
@@ -404,7 +401,7 @@
             <p>
                 The new name, <strong>Java</strong>, was associated with
                 coffee, which is why you may often see the coffee theme
-                connected with Java. ☕
+                connected with Java. 
             </p>
 
             <div class="highlight">
@@ -560,6 +557,73 @@
 
     </div>
 </section>
+        ```html
+<section class="concept-section">
+    <h2> How Java Code Works</h2>
+
+    <p>
+        Unlike languages such as C, Java does not directly convert
+        source code into machine code.
+    </p>
+
+    <p>
+        When we write a Java program, the source code is saved with
+        the <strong>.java</strong> extension. The Java compiler
+        <strong>(javac)</strong> compiles the source code and converts
+        it into <strong>bytecode</strong>. This bytecode is stored in
+        a <strong>.class</strong> file.
+    </p>
+
+    <h3>JVM – Java Virtual Machine</h3>
+
+    <p>
+        The <strong>JVM (Java Virtual Machine)</strong> loads and
+        executes the bytecode. It provides the environment required
+        to run Java programs on different operating systems.
+    </p>
+
+    <h3> JIT – Just-In-Time Compiler</h3>
+
+    <p>
+        The <strong>JIT compiler</strong> is a part of the JVM.
+        It converts frequently executed bytecode into
+        <strong>machine code</strong> at runtime, which helps improve
+        the performance of Java programs.
+    </p>
+
+    <h3>JRE – Java Runtime Environment</h3>
+
+    <p>
+        The <strong>JRE (Java Runtime Environment)</strong> provides
+        the environment and libraries needed to run Java applications.
+        It includes the JVM and the required Java class libraries.
+    </p>
+
+    <div class="java-flow">
+        <div>Java Source Code<br><strong>.java</strong></div>
+        <span>↓</span>
+        <div>Java Compiler<br><strong>javac</strong></div>
+        <span>↓</span>
+        <div>Bytecode<br><strong>.class</strong></div>
+        <span>↓</span>
+        <div>JVM</div>
+        <span>↓</span>
+        <div>JIT Compiler</div>
+        <span>↓</span>
+        <div>Machine Code</div>
+        <span>↓</span>
+        <div> Output</div>
+    </div>
+
+    <p class="highlight">
+         <strong>Remember:</strong> Java follows the idea
+        <strong>"Write Once, Run Anywhere"</strong> because the same
+        bytecode can run on different operating systems with a
+        suitable JVM.
+    </p>
+</section>
+
+
 </main>
 
     <footer>
