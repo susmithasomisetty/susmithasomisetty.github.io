@@ -421,7 +421,7 @@
 
     
     <section class="java-section">
-    <h2>☕ Features of Java</h2>
+    <h2>Features of Java</h2>
 
     <p class="section-intro">
         Java has several features that make it a popular and widely used
@@ -622,6 +622,359 @@
         suitable JVM.
     </p>
 </section>
+        <!-- How We Write a Program in Java -->
+
+<section class="topic">
+    <h2> How Do We Write a Program in Java?</h2>
+
+
+<p>
+    Java is an <strong>Object-Oriented Programming (OOP) language</strong>.
+    This means Java programs are mainly designed around
+    <strong>classes and objects</strong>.
+</p>
+
+<h2>🔹 What is an Object?</h2>
+
+<p>
+    An <strong>object</strong> is a real-world entity or thing that
+    has properties and behavior.
+</p>
+
+<p>For example, think about <strong>flowers</strong>:</p>
+
+<ul>
+    <li>Rose </li>
+    <li>Sunflower </li>
+    <li>Lotus </li>
+</ul>
+
+<p>
+    Here, <strong>Flower</strong> can be considered as a class,
+    while Rose, Sunflower, and Lotus can be considered as objects
+    or instances of that class.
+</p>
+
+<h2>🔹 What is a Class?</h2>
+
+<p>
+    A <strong>class is a blueprint or template used to create objects</strong>.
+</p>
+
+<pre><code>
+         Flower
+        /   |   \
+     Rose  Lotus  Sunflower
+</code></pre>
+
+<p>
+    Here, <code>Flower</code> is the class, and individual flowers
+    can be created as objects from that class.
+</p>
+
+<p>
+    A class can contain <strong>variables and methods</strong>
+    that describe the properties and behavior of its objects.
+</p>
+
+
+<h2>Let's Write Our First Java Program</h2>
+
+<p>
+    A simple Java program looks like this:
+</p>
+
+<pre><code>
+
+
+class Sample {
+public static void main(String[] args) {
+System.out.println("Hello, World!");
+}
+}
+</code></pre>
+
+
+<h3>🔹 Let's understand every part of this program.</h3>
+
+<h3>1. <code>class Sample</code></h3>
+
+<pre><code>
+
+
+class Sample
+</code></pre>
+
+
+<p>
+    <code>class</code> is a <strong>keyword</strong> in Java.
+</p>
+
+<p>
+    A <strong>keyword</strong> is a word that has a special meaning
+    to the Java compiler. We cannot use Java keywords as normal
+    variable or class names.
+</p>
+
+<p>Examples of Java keywords are:</p>
+
+<pre><code>
+
+
+class
+public
+static
+void
+int
+if
+else
+for
+return
+</code></pre>
+
+
+<p>
+    Here, <code>Sample</code> is the name of our class.
+</p>
+
+<p>
+    The complete class is written inside curly braces
+    <code>{ }</code>.
+</p>
+
+<pre><code>
+
+
+class Sample {
+// program goes here
+}
+</code></pre>
+
+
+<h3>2. <code>public static void main(String[] args)</code></h3>
+
+<p>
+    This is the <strong>main method</strong> of our Java program.
+</p>
+
+<pre><code>
+
+
+public static void main(String[] args)
+</code></pre>
+<p>
+    The Java Virtual Machine (JVM) looks for this
+    <code>main()</code> method as the starting point when we run
+    a normal Java application.
+</p>
+
+<h3>Let's understand each word.</h3>
+
+<h4><code>public</code></h4>
+
+<p>
+    <code>public</code> is an <strong>access modifier</strong>.
+</p>
+
+<p>
+    It means that the method can be accessed from outside the class.
+    The <code>main()</code> method needs to be accessible to the JVM,
+    so it is declared as <code>public</code>.
+</p>
+
+<h4><code>static</code></h4>
+
+<p>
+    <code>static</code> means that the method belongs to the
+    <strong>class itself</strong>, rather than requiring an object
+    of the class to be created first.
+</p>
+
+<p>
+    Because <code>main()</code> is static, the JVM can call it
+    without creating an object of <code>Sample</code>.
+</p>
+
+<h4><code>void</code></h4>
+
+<p>
+    <code>void</code> specifies the <strong>return type</strong>
+    of the method.
+</p>
+
+<p>
+    It means that this method does not return a value.
+</p>
+
+<pre><code>
+
+void display() {
+// no value is returned
+}
+</code></pre>
+
+<h4><code>main</code></h4>
+
+<p>
+    <code>main</code> is the name of the method that serves as the
+    entry point for a standard Java application.
+</p>
+
+<h4><code>String[] args</code></h4>
+
+<p>
+    This represents an <strong>array of strings</strong> that can
+    receive command-line arguments.
+</p>
+
+<p>
+    For a beginner, you can simply remember that
+    <code>String[] args</code> allows values to be passed to the
+    program when it is started from the command line.
+</p>
+
+
+<h2>🔹 3. <code>System.out.println()</code></h2>
+
+<p>
+    Now we come to the statement that actually displays something
+    on the screen.
+</p>
+
+<pre><code>
+
+System.out.println("Hello, World!");
+</code></pre>
+
+<p>Let's break it down:</p>
+
+<h4><code>System</code></h4>
+
+<p>
+    <code>System</code> is a predefined class provided by Java.
+</p>
+
+<h4><code>out</code></h4>
+
+<p>
+    <code>out</code> represents the standard output stream,
+    which is normally connected to the console.
+</p>
+
+<h4><code>println()</code></h4>
+
+<p>
+    <code>println()</code> is a method used to
+    <strong>print a value on the screen and move to the next line</strong>.
+</p>
+
+<p>For example:</p>
+
+<pre><code>
+
+System.out.println("Hello");
+System.out.println("Java");
+</code></pre>
+
+<h4>Output:</h4>
+
+<pre><code>
+
+Hello
+Java
+</code></pre>
+
+<h2> Do We Need <code>import java.io.*;</code>?</h2>
+
+<p>
+    You may have seen Java programs beginning with:
+</p>
+
+<pre><code>
+
+
+import java.io.*;
+</code></pre>
+
+
+<p>
+    But <strong>we do not need it for this simple program</strong>.
+</p>
+
+<p>
+    Our program uses <code>System.out.println()</code>, and the
+    <code>System</code> class is available through
+    <code>java.lang</code>, which Java automatically makes available.
+</p>
+
+<p>
+    So our simple program can directly start with:
+</p>
+
+<pre><code>
+
+
+class Sample {
+public static void main(String[] args) {
+System.out.println("Hello, World!");
+}
+}
+</code></pre>
+
+
+<p>
+    We use <code>import</code> when we want to use classes from
+    packages that are not automatically available.
+</p>
+
+<p>
+    For example, when working with input/output classes such as
+    <code>BufferedReader</code>, we may need an appropriate import.
+</p>
+
+
+<h2>Complete Program</h2>
+
+<pre><code>
+
+
+class Sample {
+public static void main(String args[])//we can use String args[] or String[] args
+{
+System.out.println("Hello, World!");
+}
+}
+</code></pre>
+
+<h3>Output:</h3>
+
+<pre><code></code>
+
+Hello, World!
+</code></pre>
+
+<h2> Basic Structure of a Java Program</h2>
+
+<pre><code>
+
+Class
+↓
+main() method
+↓
+Statement
+↓
+Output
+</code></pre>
+
+<p>
+    This is the basic structure we will use before moving on to
+    <strong>variables, data types, input, operators, conditions,
+    loops, methods</strong>, and eventually the major concepts of
+    <strong>Object-Oriented Programming</strong>. 
+</p>
+
+</section>
+
 
 
 </main>
