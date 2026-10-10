@@ -361,6 +361,52 @@
     font-size: 17px;
     line-height: 1.6;
 }
+        
+/* Data Types Table */
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+    margin: 25px 0;
+    border-radius: 10px;
+}
+
+.data-types-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #ffffff;
+    color: #1e293b;
+}
+
+.data-types-table th,
+.data-types-table td {
+    padding: 14px;
+    text-align: left;
+    border: 1px solid #dbe3ee;
+}
+
+.data-types-table th {
+    background: #dbeafe;
+    font-weight: 700;
+}
+
+.data-types-table tbody tr:nth-child(even) {
+    background: #f1f5f9;
+}
+
+.note {
+    font-size: 14px;
+    margin-top: 12px;
+    color: #475569;
+}
+
+@media (max-width: 600px) {
+    .data-types-table th,
+    .data-types-table td {
+        padding: 10px;
+        font-size: 13px;
+    }
+}
+
 </style>
 </head>
 <body>
@@ -1061,7 +1107,102 @@ Output
 </p>
 
 </section>
+html
+<!-- Java Data Types -->
+<section class="java-section" id="data-types">
 
+    <h2>Java Data Types</h2>
+
+    <p>
+        First of all, let's see what are meant by data types.
+        Data types are used to specify the type of data that
+        a variable can store in a program.
+    </p>
+
+    <p>Java data types are mainly classified into two types:</p>
+
+    <ul>
+        <li>Primitive Data Types</li>
+        <li>Non-Primitive Data Types</li>
+    </ul>
+
+    <h3>Primitive Data Types</h3>
+
+    <p>
+        Primitive data types are the basic built-in data types
+        in Java. Java has eight primitive data types.
+    </p>
+
+    <div class="table-container">
+        <table class="data-types-table">
+            <thead>
+                <tr>
+                    <th>Data Type</th>
+                    <th>Default Value</th>
+                    <th>Size</th>
+                    <th>Range / Values</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>byte</td>
+                    <td>0</td>
+                    <td>1 byte</td>
+                    <td>-128 to 127</td>
+                </tr>
+                <tr>
+                    <td>short</td>
+                    <td>0</td>
+                    <td>2 bytes</td>
+                    <td>-32,768 to 32,767</td>
+                </tr>
+                <tr>
+                    <td>int</td>
+                    <td>0</td>
+                    <td>4 bytes</td>
+                    <td>-2³¹ to 2³¹ - 1</td>
+                </tr>
+                <tr>
+                    <td>long</td>
+                    <td>0L</td>
+                    <td>8 bytes</td>
+                    <td>-2⁶³ to 2⁶³ - 1</td>
+                </tr>
+                <tr>
+                    <td>float</td>
+                    <td>0.0f</td>
+                    <td>4 bytes</td>
+                    <td>Approximately 6–7 decimal digits</td>
+                </tr>
+                <tr>
+                    <td>double</td>
+                    <td>0.0d</td>
+                    <td>8 bytes</td>
+                    <td>Approximately 15–16 decimal digits</td>
+                </tr>
+                <tr>
+                    <td>char</td>
+                    <td>'\u0000'</td>
+                    <td>2 bytes</td>
+                    <td>0 to 65,535</td>
+                </tr>
+                <tr>
+                    <td>boolean</td>
+                    <td>false</td>
+                    <td>Not fixed</td>
+                    <td>true or false</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <p class="note">
+        Note: Default values apply to fields and array elements.
+        Local variables must be initialized before use.
+    </p>
+
+</section>
 
 
 </main>
